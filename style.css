@@ -1,0 +1,98 @@
+*{
+    margin: 0px; /*nesneler arası uzaklık*/
+    padding: 0px;/*kenarlar arası uzaklık*/
+    box-sizing: border-box;
+}
+
+/*arka plan ayarlama*/
+body{
+    background: #dd99ff url(https://cdn.yeniakit.com.tr/images/news/625/deniz-tam-bir-sifa-kaynagi-h1541251565-8a7c8e.jpg) no-repeat left top fixed;/*fixed:sbt dursun*/
+    background-size: cover;/*pencereye sığsın*/
+}
+
+/*nav kısmının tamamı yani üst kısım ayarları*/
+nav{
+    display: flex;/*block:alt alta, inline:yan yana,inlineblock:block olanları yan yana getir. flex:sbt dur*/
+    justify-content: space-around;
+    align-items: center;/*item ler merkezde konumlansın.*/
+    min-height:8vh;
+    background-color: #5d4954;
+    transition:color 2s;/*color özelliği 2 saniyede değişsin*/
+}
+
+nav li a:hover{
+    color:hotpink; /*nav ın a larına gelince rengi 2sn de pembeye dönüşsün.*/
+}
+
+/*The Nav yazısı özellikleri*/
+.logo{
+    color: rgb(226,226,226);
+}
+
+/*Services,Projects,About yazısının bulunduğu yerin özelliği*/
+.nav_links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav_links li{
+    /*background-color:aqua;*/
+    list-style: none;
+    border-left:1px solid gray;
+    margin-bottom: 30px;
+}
+
+/*Services,Projects,About linklerinin özelliği*/
+.nav_links a{
+    color: rgb(226,226,226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size:14px;
+}
+
+
+@media screen and (max-width:768px){
+    
+}
+
+.mydiv{
+    border: 2px solid white ;
+    width: 23%;/*bir sayfaya 4 resim sığdır demektir.*/
+    margin-top: 5px; /*üstten 5 px boşluk*/
+    margin-left: 5px;/*soldan 5 px boşluk*/
+    padding: 0px;/*içerde boşluk yok */
+    display: inline-block;/*yan yana blok elemanları sırala(div,p...). Resimler yan yana sıralanır.*/
+    transition:border 2s, width 5s ;/*all:bütün özellikler.Border özelliği 2s, widht özelliği 5 sn de değişsin.*/
+}
+
+/*hover: resmin üstüne geldiğinde.*/
+.mydiv:hover{
+    border:2px solid black ; /*resmin üstüne geldiğinde border(çerçeve)2s de siyaha dönüşssün*/
+    width: 46%; /*resmin üstüne geldiğinde div in büyüklüğü 5sn de 2 katına çıksın.*/
+}
+
+/*fotoğrafı div e sığdırmak için kalıp*/
+div img { 
+    width: auto;
+    height : auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .mytext{
+      text-align: center;
+      padding: 8px;
+      transition:color 5s;/*color özelliği 5s de değişssin.*/
+  }
+  .mytext:hover{
+      color:honeydew;  /*yazının üstüne geldiğinde renk 5s de beyaza dönüşssün*/
+  }
+
+  .footer{
+    height:50px;
+    width:100%; /*sayfanın tamamını kaplasın(genişlik bakımından)*/
+    background-color:rgb(2, 2, 53);
+    text-align:center;
+}
